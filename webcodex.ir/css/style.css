@@ -27,7 +27,7 @@ html[lang=fa] .lb{letter-spacing:0;font-size:.8rem}
 /* نوار بالا */
 .nav{position:fixed;top:0;inset-inline:0;z-index:70;height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 var(--pad);padding-top:env(safe-area-inset-top);transition:.3s}
 .nav.sc{background:rgba(11,5,6,.62);backdrop-filter:blur(14px);border-bottom:1px solid var(--ln)}
-.brand{white-space:nowrap;display:flex;align-items:center;gap:10px;font-weight:700;font-size:.95rem}.mk{width:22px;height:22px;border-radius:6px}footer .footer-logo{border-radius:50%;object-fit:cover}
+.brand{white-space:nowrap;display:flex;align-items:center;gap:10px;font-weight:700;font-size:.95rem}.brand-domain{font-size:.72em;color:var(--c1);direction:ltr}.mk{width:22px;height:22px;border-radius:6px}footer .footer-logo{border-radius:50%;object-fit:cover}
 #menu{display:flex;gap:2px;margin-inline-start:auto}
 #menu a{padding:6px 12px;border-radius:8px;color:var(--mu);font-size:.85rem;font-weight:600;transition:.25s}
 #menu a:hover,#menu a.on{color:var(--tx)}

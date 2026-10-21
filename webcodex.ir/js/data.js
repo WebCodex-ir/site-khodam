@@ -7,7 +7,7 @@ window.SITE={
   assets:{logo:'img/logo.webp',photo:'img/hero.webp'},
   meta:{title:{f:'میثم شادکام | توسعه‌دهنده وب و کارشناس فناوری اطلاعات',e:'Meisam Shadkam | Web Developer & IT Specialist'},
         description:{f:'رزومه میثم شادکام؛ ۱۰ سال سابقه طراحی و بهینه‌سازی بیش از ۶۰ سایت و سامانه برای شهرداری کاشان.',e:'Resume of Meisam Shadkam: 10 years building 60+ websites and systems for Kashan Municipality.'}},
-  person:{name:{f:'میثم شادکام',e:'Meisam Shadkam'},brand:'webcodex'},
+  person:{name:{f:'میثم شادکام',e:'Meisam Shadkam'},brand:'WebCodex.ir'},
   ui:{cta:{f:'تماس با من',e:'Get in touch'},install:{f:'نصب برنامه',e:'Install app'},langName:{f:'فارسی',e:'English'},visit:{f:'مشاهده سایت',e:'Visit site'},scroll:{f:'ادامه را ببینید',e:'Scroll to discover'}},
   hero:{
     avail:{f:'آماده همکاری در پروژه‌های منتخب',e:'Available for select projects'},

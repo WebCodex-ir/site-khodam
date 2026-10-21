@@ -39,7 +39,7 @@ function render(){
  const d=D.documentElement;d.lang=L;d.dir=L==='fa'?'rtl':'ltr';
  D.title=T(S.meta.title);$('meta[name=description]').content=T(S.meta.description);
  $('#photo').src=S.assets.photo;
- $('#brand').innerHTML=`${mark}${e(T(S.person.name))}`;
+ $('#brand').innerHTML=`${mark}<span>${e(T(S.person.name))}</span><span class="brand-domain" dir="ltr">${e(S.person.brand)}</span>`;
  $('#menu').innerHTML=S.sections.filter(s=>s.nav).map(s=>`<a href="#${s.id}">${e(T(s.nav))}</a>`).join('');
  $('#ln').textContent=T(S.ui.langName);$('#lf').textContent=L==='fa'?'IR':'US';
  $('#cta span').textContent=T(S.ui.cta);$('#install').textContent=T(S.ui.install);
