@@ -33,7 +33,7 @@ const B={
   <div class="fbar"><div class="filters" id="filters">${s.categories.map((c,i)=>`<button data-c="${i}" class="${i?'':'on'}">${e(T(c))}</button>`).join('')}</div><span class="cnt" id="cnt"></span></div><div class="pgrid" id="grid"></div>`},
  timeline:s=>`${H(s)}<ol class="tl">${s.items.map(([t,m,p])=>`<li><b>${e(T(t))}</b>${m?`<small>${e(T(m))}</small>`:''}${p?`<p>${e(T(p))}</p>`:''}</li>`).join('')}</ol>`,
  contact:s=>{const f=s.form;return `<div class="two">${H(s)}<form class="form" id="cf"><label><span class="lb">${e(T(f.name))}</span><input name="n" required placeholder="${e(T(f.ph))}"></label><label><span class="lb">${e(T(f.phone))}</span><input name="p" type="tel" dir="ltr" placeholder="09xx xxx xxxx"></label><label class="full"><span class="lb">${e(T(f.msg))}</span><textarea name="m" rows="4"></textarea></label><button class="btn pri full">${e(T(f.send))}</button></form></div>
- <div class="contact">${s.phones.map(p=>`<a class="btn" href="tel:${p.replace(/\s/g,'').replace(/^0/,'+98')}" dir="ltr">${e(p)}</a>`).join('')}<a class="btn" href="mailto:${e(s.email)}" dir="ltr">${e(s.email)}</a></div><p class="lb muted">${e(T(s.location))}</p>`}
+ <div class="contact">${s.phones.map(p=>`<a class="btn" href="tel:${p.replace(/\s/g,'').replace(/^0/,'+98')}" dir="ltr">${e(p)}</a>`).join('')}<a class="btn" href="mailto:${e(s.email)}" dir="ltr">${e(s.email)}</a></div>`}
 };
 function render(){
  const d=D.documentElement;d.lang=L;d.dir=L==='fa'?'rtl':'ltr';
@@ -44,15 +44,15 @@ function render(){
  $('#ln').textContent=T(S.ui.langName);$('#lf').textContent=L==='fa'?'IR':'US';
  $('#cta span').textContent=T(S.ui.cta);$('#install').textContent=T(S.ui.install);
  $('#langmenu').innerHTML=`<button data-l="fa">فارسی</button><button data-l="en">English</button>`;
- $('#foot').innerHTML=`<img src="${S.assets.logo}" width="26" height="26" alt=""> ${e(S.person.brand)} · ${e(T(S.person.name))}`;
- const h=S.hero;let n=1;
+ $('#foot').innerHTML=`<img class="footer-logo" src="${S.assets.logo}" width="26" height="26" alt=""> ${e(S.person.brand)} · ${e(T(S.person.name))}`;
+ const h=S.hero;
  $('#top').innerHTML=`
 <section class="hero" id="home"><div class="h-top"><p class="lb"><i class="dot"></i>${e(T(h.avail))}</p><p class="lb">${e(T(h.roleLabel))}</p></div>
- <div class="h-bot"><div class="h-l"><p class="hi">${e(T(h.hi))}</p><h1><b>${e(T(h.t1))}${mark}</b><span>${e(T(h.t2))}</span></h1></div>
- <div class="h-r"><p class="lb">(01 — ${e(T(h.introTag))})</p><p class="intro">${e(T(h.introTitle))}</p><p class="txt">${e(T(h.introText))}</p><a class="lnk" href="#projects">${e(T(h.introLink))} ↗</a></div></div></section>
+ <div class="h-bot"><div class="h-l"><p class="hi">${e(T(h.hi))}</p><h1><b>${e(T(h.t1))}</b><span>${e(T(h.t2))}</span></h1></div>
+ <div class="h-r"><p class="intro">${e(T(h.introTitle))}</p><p class="txt">${e(T(h.introText))}</p><a class="lnk" href="#projects">${e(T(h.introLink))} ↗</a></div></div></section>
 <section class="stats">${S.stats.map(x=>`<div><p class="num"><span data-n="${x.n}">0</span>${x.plus?'<sup>+</sup>':''}</p><i class="ln"></i><p class="lbl">${e(T(x.label))}</p></div>`).join('')}</section>
 <div class="strip lb"><span>${e(T(S.strip))}</span><a href="#about">${e(T(S.ui.scroll))} ↓</a></div>`
- +S.sections.map(s=>{const hd=s.tag?`<div class="sh"><p class="lb">${e(T(s.label))}</p><p class="lb">(${String(++n).padStart(2,'0')} — ${e(T(s.tag))})</p></div>`:(s.label?`<div class="sh"><p class="lb">${e(T(s.label))}</p></div>`:'');
+ +S.sections.map(s=>{const hd='';
   return `<section id="${s.id}" class="sec reveal">${hd}${B[s.type](s)}</section>`}).join('');
  const gr=$('#grid'),fl=$('#filters');
  const draw=c=>{const list=S.projects.filter(p=>!c||p[3]===c);

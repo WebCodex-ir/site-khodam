@@ -50,7 +50,7 @@ window.SITE={
    {id:'contact',type:'contact',tag:{f:'فصل بعد',e:'Next chapter'},label:{f:'کار خوب با یک گفتگو شروع می‌شود',e:'Good work starts with a conversation'},nav:{f:'تماس',e:'Contact'},
     title:{f:'پروژه‌ای در ذهن دارید؟',e:'Ready to build?'},acc:{f:'شروع کنیم.',e:"Let's talk."},
     form:{name:{f:'نام شما *',e:'Your name *'},phone:{f:'شماره تماس',e:'Your number'},msg:{f:'پیام شما',e:'Your message'},send:{f:'ارسال پیام',e:'Send message'},ph:{f:'نام',e:'Your name'}},
-    phones:['0913 742 8583','0939 351 7363'],email:'meisamshadkam@gmail.com',location:{f:'کاشان، ناجی‌آباد',e:'Kashan, Iran'}}
+    phones:['0913 742 8583'],email:'meisamshadkam@gmail.com'}
   ],
   /* [فارسی، English، دامنه، شماره دسته] */
   projects:[
